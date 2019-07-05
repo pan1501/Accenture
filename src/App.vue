@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <Products v-if="getDataReady"/>
+    <Dashboard v-if="getDataReady"/>
+    <h1 v-else>Data isn't ready</h1>
   </div>
 </template>
 
 <script>
-import Products from "./components/Products.vue"
+import Dashboard from "./components/Dashboard.vue"
 import { mapGetters, mapActions, mapMutations } from "vuex";
 
 export default {
     name: "App",
     components: {
-        Products
+        Dashboard
     },
     methods: {
         ...mapActions([
