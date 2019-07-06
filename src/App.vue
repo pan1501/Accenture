@@ -7,7 +7,7 @@
 
 <script>
 import Dashboard from "./components/Dashboard.vue"
-import { mapGetters, mapActions, mapMutations } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
     name: "App",
