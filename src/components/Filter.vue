@@ -1,4 +1,7 @@
 <style lang="scss">
+.filter-label {
+    font-size: 20px;
+}
 @media only screen and (min-width: 500px) {
     .filter-section {
         display: flex;
@@ -23,7 +26,7 @@
             :options="typeOptions"
             :multiple="true"
             :preserve-search="true"
-            placeholder="Pick some"
+            placeholder="Type.."
             class="multi-select"
         />
     </div>
