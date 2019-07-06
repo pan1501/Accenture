@@ -1,5 +1,5 @@
 <style lang="scss">
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
     .filter-section {
         display: flex;
         justify-content: flex-end;
