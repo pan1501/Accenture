@@ -5,19 +5,19 @@
 <template>
     <div>
         <FilterSection/>
-        <Products/>
+        <ProductSection/>
     </div>
 </template>
 
 <script>
 import FilterSection from "./Filter";
-import Products from "./Products";
+import ProductSection from "./ProductSection";
 
 export default {
     name: "Dashboard",
     components: {
         FilterSection,
-        Products
+        ProductSection
     }
 }
 </script>

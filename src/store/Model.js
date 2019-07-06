@@ -21,12 +21,14 @@ export const Model = {
         let that = this;
         let typePassed = this.getTypeOptions();
         let filteredData = [];
-        if (selectedTypes) {
+
+        if (selectedTypes && selectedTypes.length > 0) {
             typePassed = selectedTypes;
-            typePassed.forEach(eachType => {
-                filteredData = filteredData.concat(that.getNestedByTypeData()[eachType]);
-            });
         }
+
+        typePassed.forEach(eachType => {
+            filteredData = filteredData.concat(that.getNestedByTypeData()[eachType]);
+        });
 
         return filteredData;
     }
