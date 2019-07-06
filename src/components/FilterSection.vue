@@ -3,18 +3,18 @@
     font-size: 20px;
 }
 @media only screen and (min-width: 500px) {
-    .filter-section {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+  .filter-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-        .filter-label {
-            margin-right: 12px;
-        }
-        .multi-select{
-            width:auto;
-        }
+    .filter-label {
+      margin-right: 12px;
     }
+    .multi-select{
+      width:auto;
+    }
+  }
 }
 </style>
 
@@ -23,21 +23,20 @@
         <span class="filter-label">Filter by:</span> 
         <multiselect
             v-model="typesSelection"
-            :options="typeOptions"
+            :options="getTypeOptions"
             :multiple="true"
             :preserve-search="true"
             placeholder="Type.."
-            class="multi-select"
-        />
+            class="multi-select"/>
     </div>
 </template>
 
 <script>
 import Multiselect from "vue-multiselect";
-import { mapState, mapMutations } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
-    name: "Filters",
+    name: "FilterSection",
     components: {
         "multiselect": Multiselect
     },
@@ -47,22 +46,22 @@ export default {
             "FILTER_DATA"
         ])
     },
-    mounted () {
-    },
+
     computed: {
-        ...mapState([
-            "selectedTypes",
-            "typeOptions"
+        ...mapGetters([
+            "getSelectedTypes",
+            "getTypeOptions"
         ]),
+        
         typesSelection: {
             get: function () {
-                return this.selectedTypes;
+                return this.getSelectedTypes;
             },
             set: function (newSelectedTypes) {
                 this.SET_SELECTED_TYPES(newSelectedTypes);
-                this.FILTER_DATA();
+                this.FILTER_DATA(newSelectedTypes);
             }
         }
     }
-}
+};
 </script>

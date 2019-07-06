@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import FilterSection from "./Filter";
+import FilterSection from "./FilterSection";
 import ProductSection from "./ProductSection";
 
 export default {
@@ -19,5 +19,5 @@ export default {
         FilterSection,
         ProductSection
     }
-}
+};
 </script>

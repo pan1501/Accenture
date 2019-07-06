@@ -1,9 +1,13 @@
 export const state = {
-    data_ready: false,
-    data_status: "Incomplete",
+  data_ready: false,
+  data_status: "Incomplete",
 
-    filteredData: [],
+  rawData: [],
+  nestedData: {},
+  filteredData: [],
 
-    selectedTypes: [],
-    typeOptions: []
+  selectedTypes: [],
+  typeOptions: []
 };
+
+export default state;
