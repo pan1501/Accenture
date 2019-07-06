@@ -1,7 +1,7 @@
 <style lang="scss">
 .products-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     margin-top: 12px;
     grid-gap: 30px;
     .sale {
@@ -44,7 +44,7 @@
     justify-content: space-between;
     .product-name, .product-price {
         margin-top: 12px;
-        font-size: 14px;
+        font-size: 20px;
         text-align: left;
     }
 }

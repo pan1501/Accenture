@@ -1,11 +1,24 @@
-<style>
+<style lang="scss">
+@media only screen and (max-width: 500px) {
+    .filter-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
+        .filter-label {
+            margin-right: 12px;
+        }
+        .multi-select{
+            width:auto;
+        }
+    }
+}
 </style>
 
 <template>
-    <div>
-        <span>Filter by:</span> 
-        <multiselect 
+    <div class="filter-section">
+        <span class="filter-label">Filter by:</span> 
+        <multiselect
             v-model="typesSelection"
             :options="typeOptions"
             :multiple="true"
