@@ -4,6 +4,9 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   margin-top: 12px;
   grid-gap: 30px;
+  .product{
+    padding: 20px;
+  }
   .sale {
     position: absolute;
     display: inline-block;
@@ -52,7 +55,7 @@
 
 <template>
   <div class="products-layout">
-    <div v-for="record in filteredData" :key="record.index">
+    <div class="product" v-for="record in filteredData" :key="record.index">
       <span class="sale" v-if="record.isSale">
         Sale
       </span>
