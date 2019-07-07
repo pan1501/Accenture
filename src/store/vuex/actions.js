@@ -1,11 +1,12 @@
-import { Model } from "../Model.js";
+import state from "../vuex/state";
 import jsonData from "../../assets/products.json";
 
 export const actions = {
-  LOAD_DATA({ commit }) {
+  LOAD_DATA() {
     if (jsonData) {
-      Model.data = jsonData;
-      commit("SET_DATA_READY");
+      state.rawData = jsonData;
+      state.data_status = "Complete";
+      state.data_ready = true;
     }
   }
 };
